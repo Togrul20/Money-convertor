@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertor</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #5d54a4;
+      }
+
+      h1 {
+        text-align: center;
+        color: #e1dfba;
+        background-color: #3d2e4f;
+        font-family: "Orbitron", sans-serif;
+        font-size: 50px;
+        font-weight: 800;
+        height: 12vh;
+        padding-top: 12px;
+      }
+
+      select {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      button {
+        font-family: "Lobster", sans-serif;
+      }
+
+      input {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      label {
+        font-family: "Lobster", sans-serif;
+        font-size: 1.5rem;
+      }
+
+      #firstcurrency,
+      #secondcurrency,
+      #entry,
+      #summary,
+      #convert {
+        font-size: 1.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Money Convertor</h1>
+
+    <div class="container mc mt-5 pt-5">
+      <form>
+        <label class="label text-white">Entered value</label>
+        <div class="input-group mt-3 mb-3">
+          <div class="form group w-25">
+            <select
+              id="firstcurrency"
+              class="form-control bg-dark text-white font-weight-bolder"
+            >
+              <option>USD</option>
+              <option>EURO</option>
+              <option>GBP</option>
+            </select>
+          </div>
+          <input
+            type="number"
+            class="form-control font-weight-bolder"
+            min="0"
+            id="entry"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="container mc mt-5">
+      <form>
+        <label class="label text-white">Sum value</label>
+        <div class="input-group mt-3 mb-3">
+          <div class="form group w-25">
+            <select
+              id="secondcurrency"
+              class="form-control bg-dark text-white font-weight-bolder"
+            >
+              <option>USD</option>
+              <option>EURO</option>
+              <option>GBP</option>
+            </select>
+          </div>
+          <input
+            type="number"
+            class="form-control font-weight-bolder"
+            min="0"
+            id="summary"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <button class="btn btn-muted border border-white text-white" id="convert">
+        Convert
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
